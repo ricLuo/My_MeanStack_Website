@@ -6,6 +6,8 @@
     "express": "^4.5.1",
     "method-override": "~2.0.2",
     "mongodb": "^3.4.3",
-    "mongoose": "^4.9.3"
+    "mongoose": "^4.9.3",
+    "morgan":"*",
+    "cookieParser":"*"
   }
 }
