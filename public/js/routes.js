@@ -1,0 +1,20 @@
+angular.module("httpRoutes", ["ngRoute"])
+.config(function($routeProvider,$locationProvider){
+  $routeProvider
+    .when("/",{
+      templateUrl:"/public/view/index.html",
+      controller:"thCtrl"
+    })
+    .when("/home",{
+      templateUrl:"home.html",
+      controller:""
+    })
+    .when("/about",{
+      templateUrl:"about.html",
+      controller:""
+    })
+    .otherwise({
+      redirectTo:"/"
+    });
+    $locationProvider.html5Mode(true);
+});

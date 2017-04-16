@@ -1,0 +1,27 @@
+<!doctype html>
+<html ng-app="app">
+<!-- <html> -->
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1'>
+  <!-- <base href="/"> -->
+  <title>test http</title>
+  <script src="../angular/angular.js"></script>
+  <!-- <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script> -->
+  <script src="angular-route/angular-route.js"></script>
+  <script src="test-http.js" type="text/javascript"></script>
+  <script src="../app.js" type="text/javascript"></script>
+  <script src="routes-http.js" type="text/javascript"></script>
+  <body ng-controller="thCtrl">
+  <!-- <body> -->
+    <div class="row text-center" ng-repeat="disp in displays">
+      <!-- <p>{{display}} -->
+      <!-- <textarea rows="4" cols="50" ng-model="display.text"></textarea> -->
+      <p>{{disp.text}}</p>
+      <!-- <textarea rows="4" cols="50"></textarea> -->
+    </div>
+    <div>
+      <input type="text" ng-model="text.text">
+      <button type="submit" ng-click="create()">add</button>
+    </div>
+  </body>
+</html>

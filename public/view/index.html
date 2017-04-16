@@ -1,0 +1,300 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Latest compiled and minified CSS -->
+  <title>Richard Luo</title>
+  <base href="/">
+  <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/mycss.css">
+  <!-- font-awesome -->
+  <link href="../font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+  <!-- jQuery library -->
+  <script src="../libs/jquery-3.2.1.js"></script>
+
+  <script src="../bootstrap-3.3.7/dist/js/bootstrap.js" type="text/javascript"></script>
+
+  <!-- Latest compiled JavaScript -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <script src="../angular/angular.js" type="text/javascript"></script>
+  <script src="../angular-route/angular-route.js" type="text/javascript"></script>
+  <script src="../js/core.js" type="text/javascript"></script>
+  <script src="../js/PojectController.js" type="text/javascript"></script>
+  <script src="../js/ContactController.js" type="text/javascript"></script>
+  <script src="../js/routes.js" type="text/javascript"></script>
+  <!-- <script src="../js/animation.js" type="text/javascript"></script> -->
+  <script src="../libs/typedJs/js/typed.js" type="text/javascript"></script>
+  <script src="../js/type-animate.js" type="text/javascript"></script>
+  <script src="../js/scroll.js" type="text/javascript"></script>
+
+<!-- public\libs\typedJs\dist\typed.min.js -->
+
+
+</head>
+
+<body ng-app="myApp">
+
+  <nav id="navbar" class="navbar navbar-inverse  navbar-fixed-top">
+    <!-- navbar-custom -->
+    <div class="container-fluid">
+      <div class="navbar-header page-scroll">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="">
+          <span class="sr-only">Toggle navigation</span>
+        </button>
+        <a class="navbar-brand" href="index2.html">My websites</a>
+      </div>
+      <div class="collapse navbar-collapse" id="myNavbar">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#">Home</a></li>
+          <li><a href="#section1">Project</a></li>
+          <li><a href="#section2">Contact</a></li>
+          <li><a href="#section3">About</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <header class="intro-header" style="background-image:url('../img/code.png');opacity:1;color:#000000">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+          <div class="site-heading">
+            <!-- <h1 ng-class="{ in: ngLoaded }" ng-init="ngLoaded=true" class="fade">Hi, This is My Blog</h1> -->
+            <!-- <div id="fade-in" class="caption hidden">
+              <span>root@cigarent:~$
+                Hi, my name is <b><i>Mingxiao Luo"</i></b>,
+                and I'm a
+              </span>
+            </div> -->
+
+            <span class="type"></span>
+            <!-- <hr class="small">
+            <span class="subheading">by Mingxiao Luo</span> -->
+            <h1 id="fadein-header" class="fade hidden"><strong>Full Stack Engineer And Web Developer</strong></h1>
+            <span id="fadein-sub-header" class="subheading fade hidden">
+              <hr class="small">
+              <p id="header-p">by Mingxiao Luo</p>
+            </span>
+            <!-- <div id="scroll-button" class="demo">
+            	<a href="#section04"><span></span>Scroll</a>
+            </section> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+
+
+  <section id="section1" ng-app='Project'>
+    <div class="container" ng-controller="projController">
+      <div class="row">
+        <div class="col-lg-12 text-center">
+          <h2 class="section-heading">Projects</h2>
+          <h3 class="section-subheading text-muted">The academic projects I was involved.</h3>
+        </div>
+      </div>
+      <div class="row text-center">
+        <div class="col-md-4" ng-repeat="project in projects">
+          <!-- ng-controller="project" -->
+          <span class="fa-stack fa-3x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class={{project.iconImage}} aria-hidden="true"></i>
+          </span>
+          <h4 class="projet-heading">{{project.name}}</h4>
+          <p class="text-muted">{{project.description}}</p>
+        </div>
+        <!-- <div class="col-md-4">
+          <span class="fa-stack fa-3x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-laptop fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="projet-heading">Game Design</h4>
+          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+        </div>
+        <div class="col-md-4">
+          <span class="fa-stack fa-3x">
+            <i class="fa fa-circle fa-stack-2x text-primary"></i>
+            <i class="fa fa-file-word-o fa-stack-1x fa-inverse"></i>
+          </span>
+          <h4 class="projet-heading">Sentiment Analysis</h4>
+          <p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.</p>
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+
+  <!--  <section id="about">
+  <div class="container">
+  <div class="row">
+  <div class="col-lg-12 text-center">
+  <h2 class="section-heading">About</h2>
+  <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-12">
+<ul class="timeline">
+<li>
+<div class="timeline-image">
+<img class="img-circle img-responsive" src="pace-university.png" alt="">
+</div>
+<div class="timeline-panel">
+<div class="timeline-heading">
+<h4>2009-2011</h4>
+<h4 class="subheading">Our Humble Beginnings</h4>
+</div>
+<div class="timeline-body">
+<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+</div>
+</div>
+</li>
+<li class="timeline-inverted">
+<div class="timeline-image">
+<img class="img-circle img-responsive" src="img/about/2.jpg" alt="">
+</div>
+<div class="timeline-panel">
+<div class="timeline-heading">
+<h4>March 2011</h4>
+<h4 class="subheading">An Agency is Born</h4>
+</div>
+<div class="timeline-body">
+<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+</div>
+</div>
+</li>
+<li>
+<div class="timeline-image">
+<img class="img-circle img-responsive" src="img/about/3.jpg" alt="">
+</div>
+<div class="timeline-panel">
+<div class="timeline-heading">
+<h4>December 2012</h4>
+<h4 class="subheading">Transition to Full Service</h4>
+</div>
+<div class="timeline-body">
+<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+</div>
+</div>
+</li>
+<li class="timeline-inverted">
+<div class="timeline-image">
+<img class="img-circle img-responsive" src="img/about/4.jpg" alt="">
+</div>
+<div class="timeline-panel">
+<div class="timeline-heading">
+<h4>July 2014</h4>
+<h4 class="subheading">Phase Two Expansion</h4>
+</div>
+<div class="timeline-body">
+<p class="text-muted">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt ut voluptatum eius sapiente, totam reiciendis temporibus qui quibusdam, recusandae sit vero unde, sed, incidunt et ea quo dolore laudantium consectetur!</p>
+</div>
+</div>
+</li>
+<li class="timeline-inverted">
+<div class="timeline-image">
+<h4>Be Part
+<br>Of Our
+<br>Story!</h4>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</section> -->
+
+<!-- Contact Section -->
+<section id="section2" ng-app="Contact">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <h2 class="section-heading">Contact Me</h2>
+        <h3 class="section-subheading text-muted">Lorem ipsum dolor sit amet consectetur.</h3>
+      </div>
+    </div>
+    <div class="row" ng-controller="contactController">
+      <div class="col-lg-12">
+        <div class="panel panel-default">
+          <div class="panel-heading">Send me a Message</div>
+          <div class="panel-body">
+            <form name="sentMessage" id="contactForm" novalidate>
+              <div class="row">
+                <div class="col-md-2">
+                  <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Your Name *" id="name" required data-validation-required-message="Please enter your name." ng-model="message.userName">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+                    <input type="email" class="form-control" placeholder="Your Email *" id="email" required data-validation-required-message="Please enter your email address." ng-model="message.email">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                  <div class="form-group">
+                    <input type="tel" class="form-control" placeholder="Your Phone *" id="phone" required data-validation-required-message="Please enter your phone number." ng-model="message.phone">
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="col-md-10">
+                  <div class="list-group" auto-scroll-to-bottom>
+                      <div id="listMes" class="list-group-item" ng-repeat="mes in listMessage" ng-mouseover="hoverIn()" ng-mouseleave="hoverOut()">
+                          <em><strong><i><mark style="color:red">{{mes.name}}</mark></i></strong></em>&nbsp;&nbsp;&nbsp;<small><i>@{{mes.date}}</i></small>:<br />&nbsp;&nbsp;&nbsp;{{mes.text}}
+                          <span ng-show="hoverEdit">
+                              <label x-ng-click="deleteMessage(mes._id)"><a>Delete</a></label>
+                          </span>
+                           <!-- @ {{mes.date}} -->
+                      </div>
+                  </div>
+                  <div class="form-group">
+                    <textarea style="height:70px" class="form-control" placeholder="Your Message *" id="message" required data-validation-required-message="Please enter a message." ng-model="message.text">{{message.text}}</textarea>
+                    <p class="help-block text-danger"></p>
+                  </div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="col-lg-12 text-center">
+                  <div id="success"></div>
+                  <button type="submit" ng-click="sendMessage()" class="btn btn-xl">Send Message</button>
+                </div>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <span class="copyright">Copyright &copy; Your Website 2016</span>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline social-buttons">
+          <li><a href="#"><i class="fa fa-twitter"></i></a>
+          </li>
+          <li><a href="#"><i class="fa fa-facebook"></i></a>
+          </li>
+          <li><a href="#"><i class="fa fa-linkedin"></i></a>
+          </li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <ul class="list-inline quicklinks">
+          <li><a href="#">Privacy Policy</a>
+          </li>
+          <li><a href="#">Terms of Use</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>

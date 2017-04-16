@@ -1,0 +1,298 @@
+.intro-header {
+  background:center;
+  background-size:cover;
+  margin-bottom: 50px;
+  display: block;
+  min-height: 700px;
+}
+
+.caption {
+  color: #00FF00;
+}
+
+.hidden {
+  display: none;
+}
+
+/*custom type class*/
+.type {
+  color: #00FF00;
+  /*font-size: 18px;*/
+}
+
+/*blinked cursor*/
+.typed-cursor{
+  color: #00FF00;
+	opacity: 1;
+	-webkit-animation: blink 0.7s infinite;
+	-moz-animation: blink 0.7s infinite;
+	animation: blink 0.7s infinite;
+}
+@keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+@-moz-keyframes blink{
+	0% { opacity:1; }
+	50% { opacity:0; }
+	100% { opacity:1; }
+}
+
+/**/
+
+.fade.ng-enter {
+  transition:2s linear all;
+  opacity:0;
+}
+
+/* The finishing CSS styles for the enter animation */
+.fade.ng-enter.ng-enter-active {
+  opacity:1;
+}
+
+.fade.ng-enter-stagger {
+  /* this will have a 100ms delay between each successive leave animation */
+  transition-delay: 2s;
+
+  /* As of 1.4.4, this must always be set: it signals ngAnimate
+    to not accidentally inherit a delay property from another CSS class */
+  transition-duration: 0s;
+
+  /* if you are using animations instead of transitions you should configure as follows:
+    animation-delay: 0.1s;
+    animation-duration: 0s; */
+}
+
+.navbar-custom {
+  min-height:
+  border-bottom: 1px solid;
+  font-weight: bold;
+}
+
+@media only screen and (min-width:768px){
+	.navbar-custom {
+		background:0 0;
+		border-bottom: 1px solid transparent;
+	}
+}
+
+.site-heading{
+	color: #fff;
+	padding:auto;
+	text-align: center;
+}
+
+.intro-header.container{
+	padding-right: 15px;
+	padding-left: 15px;
+	margin-right: auto;
+	margin-bottom: auto;
+}
+
+@media (min-width: 1200px){
+	nav.container {
+	    width: 1170px;
+	    height: 400px;
+	}
+	.intro-header.container.row {
+		min-height: 400px;
+	}
+	.intro-header.container div{
+		min-height: 400px;
+	}
+	.site-heading{
+		padding-top: 200px;
+	}
+}
+
+
+#header-p{
+  text-align: right;
+
+}
+
+.site-heading h1{
+	font-size: 50px;
+}
+
+section{
+	padding: 100px 0;
+}
+
+.section-heading{
+	font-size: 30px;
+    margin-top: 0;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.section-subheading{
+		font-style: italic;
+		font-size: 16px;
+		font-weight: 400;
+		margin-bottom: 40px;
+}
+
+.projet-heading{
+		font-weight: bold;
+}
+
+.timeline {
+    list-style: none;
+    padding: 0;
+    position: relative;
+    &:before {
+        top: 0;
+        bottom: 0;
+        position: absolute;
+        content: "";
+        width: 2px;
+        background-color: #f1f1f1;
+        left: 40px;
+        margin-left: -1.5px;
+    }
+}
+
+nav ul li a:hover,
+nav ul li a:focus,
+nav ul li a:active {
+  background-color: #fed136;
+}
+
+ul.social-buttons {
+  margin-bottom: 0;
+}
+ul.social-buttons li a {
+  display: block;
+  background-color: #222222;
+  height: 40px;
+  width: 40px;
+  border-radius: 100%;
+  font-size: 20px;
+  line-height: 40px;
+  color: white;
+  outline: none;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+ul.social-buttons li a:hover,
+ul.social-buttons li a:focus,
+ul.social-buttons li a:active {
+  background-color: #fed136;
+}
+
+
+
+ul.social-buttons {
+    margin-bottom: 0;
+    li {
+        a {
+            display: block;
+            background-color: $gray-darker;
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            font-size: 20px;
+            line-height: 40px;
+            color: white;
+            outline: none;
+            -webkit-transition: all 0.3s;
+            -moz-transition: all 0.3s;
+            transition: all 0.3s;
+            &:hover,
+            &:focus,
+            &:active {
+                background-color: $theme-primary;
+            }
+        }
+    }
+}
+
+
+section#section2 {
+  background-color: #222222;
+  background-image: url("../img/world3.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 90%;
+  /*min-height: 1000px;*/
+}
+
+section#section2 .section-heading {
+  color: white;
+}
+section#section2 .form-group {
+  margin-bottom: 25px;
+}
+section#section2 .form-group input,
+section#section2 .form-group textarea {
+  padding: 7px;
+}
+section#section2 .form-group input.form-control {
+  height: auto;
+}
+section#section2 .form-group textarea.form-control {
+  height: 236px;
+}
+section#section2 .form-control:focus {
+  border-color: #fed136;
+  box-shadow: none;
+}
+section#section2 ::-webkit-input-placeholder {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #eeeeee;
+}
+section#section2 :-moz-placeholder {
+  /* Firefox 18- */
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #eeeeee;
+}
+section#section2 ::-moz-placeholder {
+  /* Firefox 19+ */
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #eeeeee;
+}
+section#section2 :-ms-input-placeholder {
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #eeeeee;
+}
+section#section2 .text-danger {
+  color: #e74c3c;
+}
+footer {
+  padding: 25px 0;
+  text-align: center;
+}
+footer span.copyright {
+  line-height: 40px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-transform: none;
+}
+footer ul.quicklinks {
+  margin-bottom: 0;
+  line-height: 40px;
+  font-family: "Montserrat", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  text-transform: uppercase;
+  text-transform: none;
+}
+
+#listMes{
+  cursor: pointer;
+}
