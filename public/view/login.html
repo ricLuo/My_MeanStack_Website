@@ -1,0 +1,114 @@
+<!doctype html>
+<html ng-app="app">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- Latest compiled and minified CSS -->
+<title>Richard Luo</title>
+<base href="/">
+<link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="../css/mycss.css">
+<!-- font-awesome -->
+<link href="../font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+
+<!-- jQuery library -->
+<script src="../libs/jquery-3.2.1.js"></script>
+
+<script src="../bootstrap-3.3.7/dist/js/bootstrap.js" type="text/javascript"></script>
+
+<!-- Latest compiled JavaScript -->
+<!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> -->
+
+
+<script src="../angular/angular.js" type="text/javascript"></script>
+<script src="../angular-route/angular-route.js" type="text/javascript"></script>
+<script src="../angular-flash-alert/dist/angular-flash.js" type="text/javascript"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-cookies.js"></script>
+
+
+<script src="../js/core.js" type="text/javascript"></script>
+<script src="../js/service/UserService.js" type="text/javascript"></script>
+<script src="../js/service/FlashService.js" type="text/javascript"></script>
+<script src="../js/service/AuthenticationService.js" type="text/javascript"></script>
+<script src="../js/RegisterController.js" type="text/javascript"></script>
+<script src="../js/LoginController.js" type="text/javascript"></script>
+
+
+<body class="jumbotron" style="font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';padding-top: 48px;
+    padding-bottom: 48px;line-height: 1.5;background-color: rgb(249, 249, 249);">
+
+  <div class="container" style="width:30%;margin:auto;padding：20px" ng-controller='loginController'>
+    <div style="">
+      <img src="../img/man.png" class="img-responsive center-block" style="margin-top:0px;margin-bottom:30px"></img>
+    </div>
+    <!-- <div class="container" > -->
+      <form name="login_form" id="login_form" style="padding-bottom:30px;" >
+        <!-- style="width:70%;margin:20px 0 20px 0" -->
+        <h4 class="text-center" style="margin-bottom:15px;font-size:24px;font-weight:300;letter-spacing: -0.5px;">Sign in to MyWebSite</h4>
+        <div style="width:80%;margin:auto;padding:20px;font-size:14px;background-color:#FFFFFF;border:1px solid #d8dee2;border-radius:5px;">
+          <!-- <div class="col-lg-12"> -->
+            <div class="form-group">
+              <label for="username" style="margin-bottom:7px;font-weight: 600;">Username</label>
+              <input type="text" name="username" class="form-control" placeholder="Enter Username *" required ng-model="username">
+            </div>
+            <div class="form-group">
+              <label for="password" style="width:100%;margin-bottom: 7px;font-weight: 600;">Password     <a href="#" class="pull-right" style="border:1px solid transparent;font-size:12px">Forget Password?</a></label>
+              <input type="password" name="password" class="form-control" placeholder="Enter Password *" required ng-model="password">
+            </div>
+            <flash-message duration="5000" show-close="true">
+            </flash-message>
+
+            <button ng-click="login()" type="button" style="width:100%;margin-top:15px" class="btn btn-success" >Sign in</button>
+          <!-- </div> -->
+        </div>
+      </form>
+      <p style="font-size:14px;font-weight:400;line-height:1.5;color:#24292e;margin:auto;width:80%;padding:15px 20px;text-align:center;border:1px solid #d8dee2;border-radius: 5px;">New to MyWebSite?
+        <a href="#" style="color: #0366d6;" data-toggle="modal" data-target="#RegisterModal">Create an account</a>
+      </p>
+  </div>
+
+  <div class="modal fade" id="RegisterModal" role="dialog" ng-controller="RegisterController" >
+    <div class="modal-dialog jumbotron" role="document">
+      <div class="modal-content ">
+        <div class="modal-header ">
+          <button class="close" type="button" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Register an account</h1>
+          </div>
+          <div class="modal-body">
+            <form name="registration" text-center id="registration" >
+
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="form-group">
+                    <label for="username">Username</label>
+                    <input type="text" name="username" class="form-control" placeholder="numbers, characters..." required ng-model="username">
+                  </div>
+                  <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" name="password" class="form-control" placeholder="at least 8 numbers and one uppercase letter" required ng-model="password">
+                  </div>
+                  <!-- <div lash-message ng-if="flash">
+                  <div ng-bind="flash.message"></div>
+                </div> -->
+                <!-- <div ng-if="" -->
+                <flash-message
+                duration="5000"
+                show-close="true"
+                >
+              </flash-message>
+              <!-- on-dismiss="myCallback(flash);" -->
+
+              <button ng-click="register()" type="button" style="width:100px" class="btn btn-success pull-right" >Register</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+
+</html>

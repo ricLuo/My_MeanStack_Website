@@ -1,4 +1,5 @@
 var Message = require('./models/Message.js');
+var User = require('./models/User_test.js');
 
 function get(res){
   Message.find(function(err, message){
@@ -51,9 +52,70 @@ app.delete('/api/message/:message_id', function(req,res){
 });
 var path = require('path');
 
+
+
+// -------------------Registration
+
+app.post('/api/users', function(req, res){
+  User.findOne({'username':req.body.username}, function(err, user){
+    if(err){
+      res.send(err);
+    }
+    if(user!=null)
+      res.status(500).send({error:'User name has already been used'});
+    else {
+      User.create({
+        username: req.body.username,
+        password: req.body.password
+      }, function(err, user){
+          if(err){
+            res.send(err);
+          }
+          User.findOne({'username':req.body.username}, function(err, user){
+            if(err){
+              res.send(err);
+            }
+            res.send(user);
+            // res.status(500).send({error:'Something failed'});
+          });
+      });
+    }
+
+  });
+
+
+  // res.status(500).send({error:'Cound not establish connection'});
+
+});
+
+app.post('/api/authenticate', function(req, res){
+  User.findOne({
+    'username':req.body.username
+  },function(err, user){
+    if(err){
+      res.send(err);
+      console.log(err);
+    }
+    console.log(user);
+    res.send(user);
+  });
+});
+
+
+
+
+// ---------------------------send html file
+
 app.get('*', function(req, res){
   // res.sendFile(path.resolve('public/js/index_test.html'));
-  res.sendFile(path.join(__dirname+'/../public/view/index.html'));
+  res.sendFile(path.join(__dirname+'/../public/view/login.html'));
   // C:\backup\Desktop\Web_Project\MyWebSite\public\js\index_test.html
 });
+
+
+
+
+
+
+
 };
