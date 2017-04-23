@@ -1,4 +1,4 @@
-angular.module('app')
+angular.module('login')
   .factory('FlashService', FlashService);
 
   FlashService.$inject = ['$rootScope', 'Flash'];

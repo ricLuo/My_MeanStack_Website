@@ -84,7 +84,7 @@ app.post('/api/users', function(req, res){
   });
 
 
-  // res.status(500).send({error:'Cound not establish connection'});
+// res.status(500).send({error:'Cound not establish connection'});
 
 });
 
@@ -99,16 +99,20 @@ app.post('/api/authenticate', function(req, res){
     console.log(user);
     res.send(user);
   });
+  // res.status(500).send({error:'Cound not establish connection'});
+
 });
 
-
+app.get('/login', function(req, res){
+  res.sendFile(path.join(__dirname+'/../public/view/login.html'));
+});
 
 
 // ---------------------------send html file
 
 app.get('*', function(req, res){
   // res.sendFile(path.resolve('public/js/index_test.html'));
-  res.sendFile(path.join(__dirname+'/../public/view/login.html'));
+  res.sendFile(path.join(__dirname+'/../public/view/index.html'));
   // C:\backup\Desktop\Web_Project\MyWebSite\public\js\index_test.html
 });
 

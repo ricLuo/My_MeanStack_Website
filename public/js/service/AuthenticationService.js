@@ -1,4 +1,4 @@
-angular.module('app')
+angular.module('login')
   .factory('AuthenticationService',AuthenticationService);
 
   AuthenticationService.$inject = ['$http', '$cookies', '$timeout', 'UserService'];
@@ -28,14 +28,15 @@ angular.module('app')
       //       callback(err);
       //     });
       // }, 1000);
-
-      $http.post('/api/authenticate', {'username':username, 'password':password})
-        .success(function(response){
-          if(response!=null)
-            response.success = true;
-          else response.success = false;
-          callback(response);
-        });
+        $http.post('/api/authenticate', {'username':username, 'password':password})
+          .success(function(res){
+            if(res!==null && res.data!==null && res.data!==undefined)
+              res.success = true;
+            callback(res);
+          })
+          .catch(function(err){
+            callback(err);
+          });
 
     }
 

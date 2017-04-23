@@ -1,3 +1,3 @@
-// angular.module('myApp', ['Project','Contact']);
+angular.module('app', ['Project','login','Contact', 'httpRoutes']);
 
-angular.module('app', ['ngFlash','ngCookies']);
+angular.module('login', ['ngFlash','ngCookies']);

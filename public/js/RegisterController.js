@@ -1,4 +1,4 @@
-angular.module('app')
+angular.module('login')
 
   .controller('RegisterController', RegisterController);
 
@@ -39,7 +39,7 @@ angular.module('app')
               // $location.path('/api/users');
 
               $timeout(function(){
-                $window.location='/';
+                $window.location='/login';
               },3000);
 
               //add loading sign

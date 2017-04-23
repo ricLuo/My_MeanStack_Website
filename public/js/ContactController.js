@@ -1,6 +1,6 @@
 var contactModule = angular.module('Contact', []);
 
-contactModule.controller('contactController', ['$scope','$http', function($scope, $http){
+contactModule.controller('contactController', ['$scope','$http', '$location', '$window', function($scope, $http, $location, $window){
     // $scope.forms = [
     //   {type:'text', name: 'userName', placeholder:'Your Name *', val:'Please enter your name.'},
     //   {type:'email', name:'email', placeholder:'Your email *', val:'Please enter your email address.'},
@@ -11,6 +11,12 @@ contactModule.controller('contactController', ['$scope','$http', function($scope
     // $scope.email = {};
     // $scope.phone = {};
 
+    $scope.login = function(){
+      var landingUrl = "http://" + $window.location.host + "/login";
+      // alert(landingUrl);
+      $window.location.href = landingUrl;
+    };
+
     $scope.listMessage = {};
     $scope.message = {
       userName:"",
@@ -18,7 +24,6 @@ contactModule.controller('contactController', ['$scope','$http', function($scope
       phone:"",
       text:""
     };
-
 
     $http.get("api/message")
       .success(function(data){

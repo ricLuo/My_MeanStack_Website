@@ -24,20 +24,40 @@ $(document).ready(function(){
     }  // End if
   });
 
-  $(window).scroll(function(){
+  // $(window).scroll(function(){
 
-      $('#navbar').removeClass('hidden');
-
-      if ($(this).scrollTop() > 400) {
-          $('#navbar').fadeIn(500);
-      } else {
-          $('#navbar').fadeOut(500);
-      }
-  });
+      // $('#navbar').removeClass('hidden');
+      // $('#navbar').addClass('hidden');
+      // $('#navbar').fadeOut(500);
+      // $('#navbar').fadeIn(500);
+      // if ($(this).scrollTop() > 400) {
+      //     $('#navbar').fadeIn(500);
+      // } else {
+      //     $('#navbar').fadeOut(500);
+      // }
+  // });
   //
   // $("#navbar").hover(function(){
   //       $('#navbar').fadeIn(500);
   //   });
+
+
+var mywindow = $(window);
+var mypos = mywindow.scrollTop();
+var up = false;
+var newscroll;
+mywindow.scroll(function () {
+    newscroll = mywindow.scrollTop();
+    if (newscroll > mypos && !up) {
+        $('#navbar').stop().slideToggle();
+        up = !up;
+        console.log(up);
+    } else if(newscroll < mypos && up) {
+        $('#navbar').stop().slideToggle();
+        up = !up;
+    }
+    mypos = newscroll;
+});
 
 
 
