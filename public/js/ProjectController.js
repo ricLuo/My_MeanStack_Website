@@ -20,7 +20,7 @@ projectModule.controller('projController',['$scope', '$window', function($scope,
       urls: [
         {name: 'Fitbit Project',address: 'http://ec2-52-72-72-204.compute-1.amazonaws.com:8080/'},
         {name: 'Java Project',address: 'https://ide.c9.io/ricace/cloud_9_project_1'},
-        {name: 'This Website',address: '#'}
+        {name: 'This Website',address: 'https://github.com/ricLuo/My_MeanStack_Website'}
       ]
     },
     {
