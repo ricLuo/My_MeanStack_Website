@@ -25,5 +25,16 @@ $(function(){
 
         }, 8000);
 
+		setTimeout(
+        function()
+        {
+          //do something special
+          $('#sourceCode').removeClass('hidden');
+          $('#sourceCode').animate({
+            opacity: 1
+          }, 1100);
+
+        }, 10000);
+
 
 	});
