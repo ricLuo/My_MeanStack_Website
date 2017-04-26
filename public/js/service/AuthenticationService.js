@@ -31,7 +31,7 @@ angular.module('login')
         $http.post('/api/authenticate', {'username':username, 'password':password})
           .success(function(res){
             console.log(res);
-            if(res!==null && res.data!==null && res.data!==undefined)
+            if(res!==null && res.username!==null && res.username!==undefined)
               res.success = true;
             callback(res);
           })
