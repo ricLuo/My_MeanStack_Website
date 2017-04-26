@@ -10,6 +10,7 @@ angular.module('login')
       service.Error = Error;
       service.Warning = Warning;
       service.Info = Info;
+      service.Clear = Clear;
 
       initService($rootScope);
       return service;
@@ -36,6 +37,10 @@ angular.module('login')
   //     var message = '<strong>Well done!</strong> You successfully read this important alert message.';
   //     var id = Flash.create('success', message, 5000, {}, true);
   // }
+
+  function Clear(){
+    Flash.clear();
+  }
 
   function Success(message, keepAfterLocationChange){
     $rootScope.flash = {

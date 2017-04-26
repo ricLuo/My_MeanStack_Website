@@ -9,7 +9,7 @@ angular.module('login')
       // var vm = this;
 
 
-
+      $scope.dataLoading = false;
 
       // $scope.successAlert = function () {
       //     var message = '<strong>Well done!</strong> You successfully read this important alert message.';
@@ -32,6 +32,7 @@ angular.module('login')
           .then(function(res){
             $log.log(res.status);
             if(res.status==200){
+              FlashService.Clear();
               FlashService.Success('Registration Successfull!', true);
               $log.log(res.data);
               $log.log(res);
@@ -40,6 +41,7 @@ angular.module('login')
 
               $timeout(function(){
                 $window.location='/login';
+                $scope.dataLoading = false;
               },3000);
 
               //add loading sign
@@ -50,12 +52,15 @@ angular.module('login')
             }
             else {
               FlashService.Error(res.data.error);
+              $scope.dataLoading = false;
               // vm.dataLoading = false;
               console.log(res);
             }
+
           })
           .catch(function(err){
             FlashService.Error(err);
+            $scope.dataLoading = false;
           });
       }
   }
