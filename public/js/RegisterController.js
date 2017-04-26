@@ -1,4 +1,4 @@
-angular.module('login')
+angular.module('register')
 
   .controller('RegisterController', RegisterController);
 
@@ -21,8 +21,13 @@ angular.module('login')
       //
       // FlashService.Warning('Registration Failed!', true);
 
+      $scope.cancel = function(){
+          // var landingUrl = "http://" + $window.location.host + "/";
+          $window.location.href = "/";
+      };
+
       $scope.register = function(){
-        $scope.dataLoading = true
+        $scope.dataLoading = true;
 
 
 
@@ -33,22 +38,26 @@ angular.module('login')
             $log.log(res.status);
             if(res.status==200){
               FlashService.Clear();
-              FlashService.Success('Registration Successfull!', true);
+
               $log.log(res.data);
               $log.log(res);
 
               // $location.path('/api/users');
 
               $timeout(function(){
-                $window.location='/login';
                 $scope.dataLoading = false;
-              },3000);
+                FlashService.Success('Registration Successfull!', true);
+              },1800);
 
+              $timeout(function(){
+                $window.location='/login';
+
+              },2800);
               //add loading sign
 
               $scope.username = '';
               $scope.password = '';
-              $log.log($rootScope.flash.type);
+              // $log.log($rootScope.flash.type);
             }
             else {
               FlashService.Error(res.data.error);

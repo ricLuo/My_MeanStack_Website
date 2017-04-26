@@ -1,6 +1,6 @@
 angular.module('login')
 
-  .controller('loginController', ['$scope', '$window','$timeout', 'AuthenticationService', 'FlashService', function($scope, $window, $timeout, AuthenticationService, FlashService){
+  .controller('loginController', ['$rootScope','$scope', '$window','$timeout', 'AuthenticationService', 'FlashService', function($rootScope, $scope, $window, $timeout, AuthenticationService, FlashService){
       $scope.loading = false;
       // initController();
 
@@ -17,12 +17,22 @@ angular.module('login')
           AuthenticationService.Login($scope.username, $scope.password, function(res){
             $timeout(function(){
               console.log("sd");
-            }, 30000);
+            }, 300);
               if(res.success){
                 console.log(res.data);
-                $scope.loading = false;
-                FlashService.Success('Login Successfully');
-                // AuthenticationService.setCredentials($scope.username, $scope.password);
+
+                $timeout(function(){
+                  $scope.loading = false;
+                  FlashService.Success('Login Successfully');
+                  // $window.location='/';
+                },1800);
+                $timeout(function(){
+                  $window.location='/';
+                },2800);
+
+
+                AuthenticationService.setCredentials($scope.username, $scope.password);
+
               }
               else if(res.data==null){
                 console.log(res);

@@ -17,6 +17,12 @@ contactModule.controller('contactController', ['$scope','$http', '$location', '$
       $window.location.href = landingUrl;
     };
 
+    $scope.register = function(){
+      var landingUrl = "http://" + $window.location.host + "/register";
+      // alert(landingUrl);
+      $window.location.href = landingUrl;
+    };
+
     $scope.listMessage = {};
     $scope.message = {
       userName:"",

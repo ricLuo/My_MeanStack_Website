@@ -31,7 +31,7 @@ angular.module('login')
         $http.post('/api/authenticate', {'username':username, 'password':password})
           .success(function(res){
             console.log(res);
-            if(res!==null && res.username!==null && res.username!==undefined)
+            if(res!==null && res.username!==null && res.username!==undefined && res.password==password)
               res.success = true;
             callback(res);
           })
@@ -49,6 +49,7 @@ angular.module('login')
           authData:authData
         }
       };
+      console.log(authData);
 
       //set default auth header for http request
       $http.defaults.headers.common['Authorization'] = 'Basic '+ authData;
@@ -63,6 +64,7 @@ angular.module('login')
       $cookies.remove('globals');
       $http.defaults.headers.common.Authorization = 'Basic';
     }
+  }
     var Base64 = {
 
         keyStr: 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=',
@@ -143,6 +145,3 @@ angular.module('login')
             return output;
         }
     };
-
-
-  }

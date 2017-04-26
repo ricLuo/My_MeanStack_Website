@@ -41,7 +41,7 @@
     <!-- <div class="container" > -->
       <form name="login_form" id="login_form" style="padding-bottom:30px;" >
         <!-- style="width:70%;margin:20px 0 20px 0" -->
-        <h4 class="text-center" style="margin-bottom:15px;font-size:24px;font-weight:300;letter-spacing: -0.5px;">Sign in to MyWebSite</h4>
+        <h4 class="text-center" style="margin-bottom:15px;font-size:24px;font-weight:600;letter-spacing: -0.5px;">Sign in</h4>
         <div style="width:80%;margin:auto;padding:20px;font-size:14px;background-color:#FFFFFF;border:1px solid #d8dee2;border-radius:5px;">
           <!-- <div class="col-lg-12"> -->
             <div class="form-group">
@@ -54,7 +54,7 @@
             </div>
             <flash-message duration="5000" show-close="true">
             </flash-message>
-            <div><img src="../img/Spinner.gif" style="width:20%" ng-show="loading" /></div>
+            <div style="text-align:center"><img src="../img/Spinner.gif" style="width:10%" ng-show="loading" /></div>
             <button ng-click="login()" type="button" style="width:100%;margin-top:15px" class="btn btn-success" >Sign in</button>
             <button ng-click="cancel()" type="button" style="width:100%;margin-top:15px" class="btn btn-default" >Cancel</button>
           <!-- </div> -->
@@ -65,7 +65,7 @@
       </p>
   </div>
 
-  <div class="modal fade" id="RegisterModal" role="dialog" ng-controller="RegisterController" >
+  <div ng-app="register" class="modal fade" id="RegisterModal" role="dialog" ng-controller="RegisterController" >
     <div class="modal-dialog jumbotron" role="document">
       <div class="modal-content ">
         <div class="modal-header ">
@@ -95,7 +95,7 @@
                 >
               </flash-message>
               <!-- on-dismiss="myCallback(flash);" -->
-              <div style="text-align:center"><img src="../img/Spinner.gif"  style="width:20%" ng-show="dataLoading" /></div>
+              <div style="text-align:center"><img src="../img/Spinner.gif"  style="width:10%" ng-show="dataLoading" /></div>
               <button ng-click="register()" type="button" style="width:100px" class="btn btn-success pull-right" >Register</button>
             </div>
           </div>

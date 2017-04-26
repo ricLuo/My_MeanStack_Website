@@ -83,7 +83,7 @@ app.post('/api/users', function(req, res){
 
   });
 
-  
+
 
 
 // res.status(500).send({error:'Cound not establish connection'});
@@ -107,6 +107,10 @@ app.post('/api/authenticate', function(req, res){
 
 app.get('/login', function(req, res){
   res.sendFile(path.join(__dirname+'/../public/view/login.html'));
+});
+
+app.get('/register', function(req, res){
+  res.sendFile(path.join(__dirname+'/../public/view/register.html'));
 });
 
 
