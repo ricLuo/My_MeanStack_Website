@@ -3,7 +3,7 @@
 This is my website built by Meanstack: nodejs+mongoose+express+angularjs+bootstrap,
 
 run this application by excute command:     
-`<addr>` node server.js
+`<node server.js>` 
 
 if you want to run in local mongodb database, please change url address in /app/config/db.js
 
