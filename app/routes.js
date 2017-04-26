@@ -117,6 +117,10 @@ app.get('/oauth2callback', function(req, res){
   res.redirect('http://www.mingxiaoluo.com');
 });
 
+app.get('/sentiment', function(req, res){
+  res.sendFile(path.join(__dirname+'/../public/view/SentimentAnalysis.html'));
+});
+
 
 // ---------------------------send html file
 
