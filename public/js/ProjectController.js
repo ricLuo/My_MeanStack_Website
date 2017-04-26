@@ -26,7 +26,7 @@ projectModule.controller('projController',['$scope', function($scope){
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.',
       iconImage:'fa fa-file-word-o fa-stack-1x fa-inverse',
       urls: [
-        {name: 'SentimentAnalysis',address: 'https://localhost:8080/sentiment'},
+        {name: 'SentimentAnalysis',address: '/sentiment'},
         {name: 'Fitbit Project',address: 'http://ec2-52-72-72-204.compute-1.amazonaws.com:8080/'}
       ]
     }
