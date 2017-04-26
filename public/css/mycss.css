@@ -6,6 +6,15 @@
   min-height: 700px;
 }
 
+.layer {
+    background-color: rgba(0,0,0,.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
 .caption {
   color: #00FF00;
 }
