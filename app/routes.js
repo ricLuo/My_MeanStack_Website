@@ -114,7 +114,7 @@ app.get('/register', function(req, res){
 });
 
 app.get('/oauth2callback', function(req, res){
-  res.redirect('/');
+  res.redirect('http://www.mingxiaoluo.com');
 });
 
 
