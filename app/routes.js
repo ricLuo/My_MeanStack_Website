@@ -113,6 +113,10 @@ app.get('/register', function(req, res){
   res.sendFile(path.join(__dirname+'/../public/view/register.html'));
 });
 
+app.get('/oauth2callback', function(req, res){
+  res.redirect('/');
+});
+
 
 // ---------------------------send html file
 
