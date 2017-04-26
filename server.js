@@ -18,7 +18,8 @@ var port = process.env.PORT || 8080;
 
 mongoose.Promise = require('bluebird');
 
-mongoose.connect("mongodb://localhost/MyWebSite")
+// mongoose.connect("mongodb://localhost/MyWebSite")
+mongoose.connect(db.url)
   .then(()=> console.log('connection succussful'))
   .catch((err) => console.error(err));
 
