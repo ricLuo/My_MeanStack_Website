@@ -113,13 +113,21 @@ app.get('/register', function(req, res){
   res.sendFile(path.join(__dirname+'/../public/view/register.html'));
 });
 
-app.get('/oauth2callback', function(req, res){
-  res.redirect('http://www.mingxiaoluo.com');
-});
-
-app.get('/sentiment', function(req, res){
+app.get('/sentiment1', function(req, res){
   res.sendFile(path.join(__dirname+'/../public/view/SentimentAnalysis.html'));
 });
+
+app.get('/sentiment2', function(req, res){
+  res.sendFile(path.join(__dirname+'/../public/view/MySentiment.html'));
+});
+
+
+
+// app.get('/oauth2callback', function(req, res){
+//   res.redirect('http://www.mingxiaoluo.com');
+// });
+
+
 
 
 // ---------------------------send html file

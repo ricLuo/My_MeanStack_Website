@@ -106,7 +106,7 @@
       </div>
     </div>
     <div id="sourceCode"class="fade hidden text-center" style="bottom:280px;left:700px;position:absolute;">
-      <button class="btn btn-info"><a style="color:#ffffff;border:none;text-decoration:none" href="https://github.com/ricLuo/My_MeanStack_Website">View SourceCode</a></button>
+      <button class="btn btn-primary"><a style="color:#ffffff;border:none;text-decoration:none" href="https://github.com/ricLuo/My_MeanStack_Website">View SourceCode</a></button>
     </div>
   </header>
 
@@ -129,9 +129,11 @@
           </span>
           <h4 class="projet-heading">{{project.name}}</h4>
           <p class="text-muted">{{project.description}}</p>
-          <h5>See Projects:</h5>
-          <div style="display:inline-block" ng-repeat = "url in project.urls">
-            <a ng-href={{url.address}}>{{url.name}}&nbsp;&nbsp;</a>
+          <h5><b><i>See Projects:</i></b></h5>
+          <div style="display:block" ng-repeat = "url in project.urls">
+            <button style="margin-top:10px" ng-if="project.name!='Sentiment Analysis'" class="btn btn-sm btn-primary"><a style="color:#ffffff;border:none;text-decoration:none" ng-href={{url.address}} >{{url.name}}</a></button>
+            <button style="margin-top:10px" ng-if="url.name=='SentimentAnalysis1'" class="btn btn-sm btn-primary"><a style="color:#ffffff;border:none;text-decoration:none" ng-click=sentiment1()   style="cursor:pointer">sentiment project 1</a></button>
+            <button style="margin-top:10px" ng-if="url.name=='SentimentAnalysis2'" class="btn btn-sm btn-primary"><a style="color:#ffffff;border:none;text-decoration:none" ng-click=sentiment2()   style="cursor:pointer">sentiment project 2</a></button>
           </div>
         </div>
         <!-- <div class="col-md-4">
@@ -249,7 +251,7 @@
         <div class="panel panel-default">
           <div class="panel-heading" style="height:50px">
               Send me a Message
-              <button class="pull-right btn btn-primary btn"  ng-click="register()"><a style="color:#ffffff">Sign up</a></button>
+              <button class="pull-right btn btn-info"  ng-click="register()"><a style="color:#ffffff">Sign up</a></button>
               <span class="pull-right">&nbsp; &nbsp; </span>
               <!-- <span style="display:inline-block" class="pull-right">&nbsp; &nbsp; or &nbsp; &nbsp;</span> -->
               <button id="login" class="pull-right btn btn-success"  ng-click="login()"><a style="color:#ffffff">Sign in</a></button>

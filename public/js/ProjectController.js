@@ -1,6 +1,17 @@
 var projectModule = angular.module('Project', []);
 
-projectModule.controller('projController',['$scope', function($scope){
+projectModule.controller('projController',['$scope', '$window', function($scope,$window){
+
+  $scope.sentiment1 = function(){
+    var langdingUrl = 'http://'+$window.location.host+'/sentiment1';
+    $window.location.href= langdingUrl;
+  };
+
+  $scope.sentiment2 = function(){
+    var langdingUrl = 'http://'+$window.location.host+'/sentiment2';
+    $window.location.href= langdingUrl;
+  };
+
   $scope.projects = [
     {
       name:'Web Application',
@@ -26,8 +37,8 @@ projectModule.controller('projController',['$scope', function($scope){
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.',
       iconImage:'fa fa-file-word-o fa-stack-1x fa-inverse',
       urls: [
-        {name: 'SentimentAnalysis',address: 'http://ec2-54-173-241-209.compute-1.amazonaws.com:8080/sentiment'},
-        {name: 'Fitbit Project',address: 'http://ec2-52-72-72-204.compute-1.amazonaws.com:8080/'}
+        {name: 'SentimentAnalysis1'},
+        {name: 'SentimentAnalysis2'}
       ]
     }
   ];
