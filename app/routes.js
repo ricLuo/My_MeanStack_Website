@@ -134,6 +134,7 @@ app.get('/sentiment2', function(req, res){
 
 app.get('*', function(req, res){
   // res.sendFile(path.resolve('public/js/index_test.html'));
+  // res.sendFile(path.join(__dirname+'/../public/view/cryEngine.html'));
   res.sendFile(path.join(__dirname+'/../public/view/index.html'));
   // C:\backup\Desktop\Web_Project\MyWebSite\public\js\index_test.html
 });

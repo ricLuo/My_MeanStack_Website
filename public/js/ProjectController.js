@@ -20,7 +20,8 @@ projectModule.controller('projController',['$scope', '$window', function($scope,
       urls: [
         {name: 'Fitbit Project',address: 'http://ec2-52-72-72-204.compute-1.amazonaws.com:8080/'},
         {name: 'Java Project',address: 'https://ide.c9.io/ricace/cloud_9_project_1'},
-        {name: 'This Website',address: 'https://github.com/ricLuo/My_MeanStack_Website'}
+        {name: 'This Website',address: 'https://github.com/ricLuo/My_MeanStack_Website'},
+        {name: 'Spring-Elasticsearch Project', address: 'https://github.com/ricLuo/Spring-Elasticsearch'}
       ]
     },
     {
@@ -28,7 +29,7 @@ projectModule.controller('projController',['$scope', '$window', function($scope,
       description:'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima maxime quam architecto quo inventore harum ex magni, dicta impedit.',
       iconImage:'fa fa-laptop fa-stack-1x fa-inverse',
       urls: [
-        {name: 'Fitbit Project',address: 'http://ec2-52-72-72-204.compute-1.amazonaws.com:8080/'},
+        {name: 'CyEngine Game',address: 'http://ec2-52-72-72-204.compute-1.amazonaws.com:8080/'},
         {name: 'Fitbit Project',address: 'http://ec2-52-72-72-204.compute-1.amazonaws.com:8080/'}
       ]
     },

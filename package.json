@@ -2,12 +2,14 @@
   "name": "MyWebSite",
   "main": "server.js",
   "dependencies": {
+    "angular-youtube-embed": "^1.3.1",
     "body-parser": "~1.4.2",
+    "cookieParser": "*",
     "express": "^4.5.1",
+    "googleapis": "^19.0.0",
     "method-override": "~2.0.2",
     "mongodb": "^3.4.3",
     "mongoose": "^4.9.3",
-    "morgan":"*",
-    "cookieParser":"*"
+    "morgan": "*"
   }
 }
