@@ -1,3 +1,4 @@
+<!doctype html>
 <html>
 <head>
   <meta charset="utf-8">
@@ -8,49 +9,47 @@
 
   <!-- Latest compiled and minified CSS -->
   <title>Richard Luo</title>
-  <base href="/">
-  <link rel="stylesheet" type="text/css" href="../bootstrap-3.3.7/dist/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/mycss.css">
+  <base href="/"/>
+  <link rel="stylesheet" type="text/css" href="../libs/bootstrap-3.3.7/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="view/css/mycss.css">
   <!-- font-awesome -->
-  <link href="../font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href="../libs/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
   <!-- <link href="login.html" type="text/html"> -->
   <!-- jQuery library -->
   <script src="../libs/jquery-3.2.1.js"></script>
 
-  <script src="../bootstrap-3.3.7/dist/js/bootstrap.js" type="text/javascript"></script>
+  <script src="../libs/bootstrap-3.3.7/dist/js/bootstrap.js"></script>
 
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
-  <script src="../angular/angular.js" type="text/javascript"></script>
-  <script src="../angular-route/angular-route.js" type="text/javascript"></script>
-  <script src="../js/core.js" type="text/javascript"></script>
-  <script src="../js/ProjectController.js" type="text/javascript"></script>
-  <script src="../js/ContactController.js" type="text/javascript"></script>
-  <script src="../js/routes.js" type="text/javascript"></script>
-  <!-- <script src="../js/animation.js" type="text/javascript"></script> -->
-  <script src="../libs/typedJs/js/typed.js" type="text/javascript"></script>
-  <script src="../js/type-animate.js" type="text/javascript"></script>
-  <script src="../js/scroll.js" type="text/javascript"></script>
-
-  <script src="../angular-flash-alert/dist/angular-flash.js" type="text/javascript"></script>
+  <script src="../libs/angular/angular.js"></script>
   <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.3/angular-cookies.js"></script>
+  <script src="../libs/angular-flash-alert/dist/angular-flash.js" ></script>
+  <script src="../libs/angular-route/angular-route.js"></script>
+  <script src="view/controller/core.js"></script>
+  <script src="view/controller/ProjectController.js"></script>
+  <script src="view/controller/LoginController.js" ></script>
+  <script src="view/controller/ContactController.js"></script>
+  <script src="view/controller/routes.js"></script>
+  <script src="view/controller/RegisterController.js" ></script>
+  <script src="view/controller/scroll.js"></script>
 
+
+  <script src="../libs/typedJs/js/typed.js"></script>
+  <script src="view/controller/type-animate.js" ></script>
   <!-- google sign in -->
   <script src="https://apis.google.com/js/platform.js" async defer></script>
 
-  <script src="../js/service/UserService.js" type="text/javascript"></script>
-  <script src="../js/service/FlashService.js" type="text/javascript"></script>
-  <script src="../js/service/AuthenticationService.js" type="text/javascript"></script>
-  <script src="../js/RegisterController.js" type="text/javascript"></script>
-  <script src="../js/LoginController.js" type="text/javascript"></script>
+  <script src="view/controller/service/UserService.js" ></script>
+  <script src="view/controller/service/FlashService.js"></script>
+  <script src="view/controller/service/AuthenticationService.js" ></script>
 <!-- public\libs\typedJs\dist\typed.min.js -->
 
 
 </head>
 
 
-<body ng-app="app">
+<body ng-app="mywebsite">
 
 
   <nav id="navbar" class="navbar navbar-inverse  navbar-fixed-top">
@@ -117,23 +116,22 @@
       <div class="row">
         <div class="col-lg-12 text-center">
           <h2 class="section-heading">Projects</h2>
-          <h3 class="section-subheading text-muted">The academic projects I was involved.</h3>
+          <h3 class="section-subheading text-muted">The personal projects and academic projects I was involved.</h3>
         </div>
       </div>
       <div class="row text-center">
-        <div class="col-md-4" ng-repeat="project in projects">
+        <div class="col-md-3" ng-repeat="project in projects">
           <!-- ng-controller="project" -->
           <span class="fa-stack fa-3x">
             <i class="fa fa-circle fa-stack-2x text-primary"></i>
             <i class={{project.iconImage}} aria-hidden="true"></i>
           </span>
           <h4 class="projet-heading">{{project.name}}</h4>
-          <p class="text-muted">{{project.description}}</p>
+          <p style="height:100px" class="text-muted">{{project.description}}</p>
           <h5><b><i>See Projects:</i></b></h5>
           <div style="display:block" ng-repeat = "url in project.urls">
-            <button style="margin-top:10px" ng-if="project.name!='Sentiment Analysis'" class="btn btn-sm btn-primary"><a style="color:#ffffff;border:none;text-decoration:none" ng-href={{url.address}} >{{url.name}}</a></button>
-            <button style="margin-top:10px" ng-if="url.name=='SentimentAnalysis1'" class="btn btn-sm btn-primary"><a style="color:#ffffff;border:none;text-decoration:none" ng-click=sentiment1()   style="cursor:pointer">sentiment project 1</a></button>
-            <button style="margin-top:10px" ng-if="url.name=='SentimentAnalysis2'" class="btn btn-sm btn-primary"><a style="color:#ffffff;border:none;text-decoration:none" ng-click=sentiment2()   style="cursor:pointer">sentiment project 2</a></button>
+            <button style="margin-top:10px" ng-if="url.name!='SentimentAnalysis1'" class="btn btn-sm btn-primary btn-block"><a style="color:#ffffff;border:none;text-decoration:none" ng-href={{url.address}}>{{url.name}}</a></button>
+            <button style="margin-top:10px" ng-if="url.name=='SentimentAnalysis1'" class="btn btn-sm btn-primary btn-block"><a style="color:#ffffff;border:none;text-decoration:none" ng-click=sentiment1()   style="cursor:pointer">sentiment analysis</a></button>
           </div>
         </div>
         <!-- <div class="col-md-4">

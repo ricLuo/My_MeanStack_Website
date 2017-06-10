@@ -10,6 +10,7 @@
     "method-override": "~2.0.2",
     "mongodb": "^3.4.3",
     "mongoose": "^4.9.3",
-    "morgan": "*"
+    "morgan": "*",
+    "angular-flash-alert": "~2.4.0"
   }
 }

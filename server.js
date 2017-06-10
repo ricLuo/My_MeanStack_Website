@@ -24,7 +24,7 @@ mongoose.connect(db.url)
   .catch((err) => console.error(err));
 
 // app.use(express.static('./public'));
-var static_path = path.join(__dirname, 'public');
+var static_path = path.join(__dirname, './public');
 console.log(static_path);
 app.use(express.static(path.join(__dirname, 'public')));
 
