@@ -19,7 +19,7 @@ projectModule.controller('projController',['$scope', '$window', function($scope,
       iconImage:'fa fa-desktop fa-stack-1x fa-inverse',
       urls: [
         {name: 'React-D3-Python Project',address: 'https://github.com/ricLuo/Clipboard-Health-Coding-Challenge'},
-        {name: 'Fitbit Oauth',address: 'http://ec2-52-72-72-204.compute-1.amazonaws.com:8080/'},
+        {name: 'Fitbit Oauth',address: 'https://github.com/ricLuo/fitbit_nodejs_oauth2'},
         {name: 'This Website',address: 'https://github.com/ricLuo/My_MeanStack_Website'}
       ]
     },
